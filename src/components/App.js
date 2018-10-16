@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import {Flex} from 'rebass';
+import quotes from './../quotes.md';
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
         <div>adfadfM</div>
         <div>second</div>
         <div>third</div>
+        <pre>{JSON.stringify(quotes, null, 2)}</pre>
       </Flex>
     );
   }
