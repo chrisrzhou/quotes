@@ -2,7 +2,7 @@ const normalizeNewline = require('normalize-newline');
 
 const RE_BLOCKQUOTE = /\s*>\s*/;
 
-const RE_AUTHOR = /\s+--\s*/;
+const RE_AUTHOR = /\s+@\s*/;
 
 const RE_HASHTAG = /\s+#\s*/;
 

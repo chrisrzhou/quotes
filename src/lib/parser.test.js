@@ -96,12 +96,14 @@ test('correctly parses out quotes and trims whitespace', () => {
 test('correctly parses hashtags', () => {
   expect(
     parser(`
-      > quote 1 #tag1 #tag2
+      > quote 1 #tag1     #tag2
       #tag3
 
       > #invalid_before_quote quote 2
 
       > quote 3 #malformed#tag
+
+      > quote 4 #tag1 2 #tag3
   `),
   ).toEqual([
     {
@@ -119,19 +121,31 @@ test('correctly parses hashtags', () => {
       content: 'quote 3',
       tags: ['malformed#tag'],
     },
+    {
+      author: null,
+      content: 'quote 4',
+      tags: ['tag1 2', 'tag3'],
+    },
   ]);
 });
 
 test('correctly parses authors', () => {
   expect(
     parser(`
-      > quote 1 --Chris Zhou
+      > quote 1 @Chris Zhou
 
-      > --invalid_author_before_quote quote 2
+      > @invalid_author_before_quote quote 2
 
-      > quote 3 --Chris Zhou #tag1 #tag2
+      > quote 3 @Chris Zhou #tag1 #tag2
 
-      > quote 4 #tag1 #tag2 --invalid_author_after_tags
+      > quote 4 #tag1 #tag2 @invalid_author_after_tags
+
+      > quote 5
+          @Chris Zhou
+
+      > quote 6
+          @Chris Zhou
+          #tag1 #tag2
   `),
   ).toEqual([
     {
@@ -141,7 +155,7 @@ test('correctly parses authors', () => {
     },
     {
       author: null,
-      content: '--invalid_author_before_quote quote 2',
+      content: '@invalid_author_before_quote quote 2',
       tags: [],
     },
     {
@@ -153,6 +167,16 @@ test('correctly parses authors', () => {
       author: 'invalid_author_after_tags',
       content: 'quote 4 #tag1 #tag2',
       tags: [],
+    },
+    {
+      author: 'Chris Zhou',
+      content: 'quote 5',
+      tags: [],
+    },
+    {
+      author: 'Chris Zhou',
+      content: 'quote 6',
+      tags: ['tag1', 'tag2'],
     },
   ]);
 });

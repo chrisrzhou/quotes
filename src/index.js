@@ -1,7 +1,7 @@
 import './index.css';
 
-import App from './components/App';
 import React from 'react';
+import Root from './components/Root';
 import {render} from 'react-snapshot';
 
-render(<App />, document.getElementById('root'));
+render(<Root />, document.getElementById('root'));

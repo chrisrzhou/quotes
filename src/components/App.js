@@ -1,19 +1,18 @@
-import React, {Component} from 'react';
-
 import {Flex} from 'rebass';
-import quotes from './../quotes.md';
+import React from 'react';
+import {connect} from 'react-redux';
 
-class App extends Component {
+class App extends React.PureComponent {
   render() {
     return (
       <Flex bg="yellow" justifyContent="space-between">
         <div>adfadfM</div>
         <div>second</div>
         <div>third</div>
-        <pre>{JSON.stringify(quotes, null, 2)}</pre>
+        <pre>{JSON.stringify(this.props.quotes, null, 2)}</pre>
       </Flex>
     );
   }
 }
 
-export default App;
+export default connect(state => ({quotes: state.quotes}))(App);
