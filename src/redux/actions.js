@@ -12,11 +12,14 @@ const createAction = type => payload => ({
 });
 
 export const actionTypes = createActionTypes('quotes', [
+  'SEARCH',
   'SELECT_AUTHOR',
   'SELECT_QUOTE',
   'SELECT_TAG',
-  'SEARCH',
+  'SET_SHOW_SEARCH_RESULTS',
 ]);
+
+export const search = createAction(actionTypes.SEARCH);
 
 export const selectAuthor = createAction(actionTypes.SELECT_AUTHOR);
 
@@ -24,4 +27,6 @@ export const selectQuote = createAction(actionTypes.SELECT_QUOTE);
 
 export const selectTag = createAction(actionTypes.SELECT_TAG);
 
-export const search = createAction(actionTypes.SEARCH);
+export const setShowSearchResults = createAction(
+  actionTypes.SET_SHOW_SEARCH_RESULTS,
+);

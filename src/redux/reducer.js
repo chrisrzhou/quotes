@@ -14,27 +14,35 @@ const createReducer = (initialState, handlers) => {
 
 const getInitialState = () => ({
   quotes: quotes.map(quote => ({...quote, id: shortid()})),
-  selectedAuthor: null,
-  selectedQuote: null,
-  selectedTag: null,
   searchString: null,
+  selectedAuthor: null,
+  selectedQuoteIndex: Math.floor(Math.random() * quotes.length),
+  selectedTag: null,
+  showSearchResults: false,
 });
 
 export default createReducer(getInitialState(), {
+  [actionTypes.SEARCH]: (state, {payload: searchString}) => ({
+    ...state,
+    searchString,
+  }),
   [actionTypes.SELECT_AUTHOR]: (state, {payload: selectedAuthor}) => ({
     ...state,
     selectedAuthor,
   }),
-  [actionTypes.SELECT_QUOTE]: (state, {payload: selectedQuote}) => ({
+  [actionTypes.SELECT_QUOTE]: (state, {payload: selectedQuoteIndex}) => ({
     ...state,
-    selectedQuote,
+    selectedQuoteIndex,
   }),
   [actionTypes.SELECT_TAG]: (state, {payload: selectedTag}) => ({
     ...state,
     selectedTag,
   }),
-  [actionTypes.SEARCH]: (state, {payload: searchString}) => ({
+  [actionTypes.SET_SHOW_SEARCH_RESULTS]: (
+    state,
+    {payload: showSearchResults},
+  ) => ({
     ...state,
-    searchString,
+    showSearchResults,
   }),
 });
