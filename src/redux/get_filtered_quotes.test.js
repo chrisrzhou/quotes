@@ -1,8 +1,8 @@
-import {getSearchResults} from './selectors';
+import {getFilteredQuotes} from './selectors';
 
 test('returns empty array for no quotes', () => {
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes: [],
     }),
   ).toEqual([]);
@@ -23,7 +23,7 @@ test('nothing to filter (empty search inputs)', () => {
       tags: [],
     },
   ];
-  expect(getSearchResults({quotes})).toEqual([
+  expect(getFilteredQuotes({quotes})).toEqual([
     {
       content: 'a',
       tags: [],
@@ -38,7 +38,7 @@ test('nothing to filter (empty search inputs)', () => {
     },
   ]);
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       selectedAuthor: '',
       selectedTag: '',
@@ -80,7 +80,7 @@ test('filter by searchString (insensitive)', () => {
     },
   ];
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       searchString: 'a',
     }),
@@ -99,7 +99,7 @@ test('filter by searchString (insensitive)', () => {
     },
   ]);
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       searchString: 'AA',
     }),
@@ -134,7 +134,7 @@ test('filter by author', () => {
     },
   ];
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       selectedAuthor: 'x',
     }),
@@ -151,7 +151,7 @@ test('filter by author', () => {
     },
   ]);
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       selectedAuthor: 'y',
     }),
@@ -184,7 +184,7 @@ test('filter by tags', () => {
     },
   ];
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       selectedTag: 'tag1',
     }),
@@ -199,7 +199,7 @@ test('filter by tags', () => {
     },
   ]);
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       selectedTag: 'tag3',
     }),
@@ -239,7 +239,7 @@ test('filter by all combinations', () => {
     },
   ];
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       searchString: 'a',
       selectedTag: 'tag1',
@@ -257,7 +257,7 @@ test('filter by all combinations', () => {
     },
   ]);
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       selectedAuthor: 'x',
       searchString: 'a',
@@ -271,7 +271,7 @@ test('filter by all combinations', () => {
     },
   ]);
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       selectedAuthor: 'y',
       searchString: 'c',
@@ -289,7 +289,7 @@ test('filter by all combinations', () => {
     },
   ]);
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       selectedAuthor: 'y',
       searchString: 'c',
@@ -303,7 +303,7 @@ test('filter by all combinations', () => {
     },
   ]);
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       selectedAuthor: 'y',
       searchString: 'c',
@@ -311,14 +311,14 @@ test('filter by all combinations', () => {
     }),
   ).toEqual([]);
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       selectedAuthor: 'badauthor',
       searchString: 'c',
     }),
   ).toEqual([]);
   expect(
-    getSearchResults({
+    getFilteredQuotes({
       quotes,
       selectedAuthor: 'y',
       searchString: 'badcontent',

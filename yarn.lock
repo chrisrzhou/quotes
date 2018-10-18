@@ -734,6 +734,14 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@chrisrzhou/ui@https://github.com/chrisrzhou/ui":
+  version "0.0.1"
+  resolved "https://github.com/chrisrzhou/ui#5f31c2a84f29999d8b520e2ea5c3dac58a4574a2"
+  dependencies:
+    react "^16.5.2"
+    rebass "^2.3.4"
+    styled-components "^3.4.9"
+
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
@@ -7932,7 +7940,7 @@ style-loader@0.23.0:
     loader-utils "^1.1.0"
     schema-utils "^0.4.5"
 
-styled-components@^3.4.10:
+styled-components@^3.4.10, styled-components@^3.4.9:
   version "3.4.10"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.4.10.tgz#9a654c50ea2b516c36ade57ddcfa296bf85c96e1"
   dependencies:

@@ -1,18 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {getSearchResults} from 'redux/selectors';
+import {getFilteredQuotes} from 'redux/selectors';
 import {selectQuote} from 'redux/actions';
 
 const SearchResults = ({searchResults, showSearchResults, onSelectQuote}) => {
   if (!showSearchResults) {
     return null;
   }
-  return <div>{JSON.stringify(searchResults, null, 2)}</div>;
+  return <pre>{JSON.stringify(searchResults, null, 2)}</pre>;
 };
 
 export default connect(
   state => ({
-    searchResults: getSearchResults(state),
+    searchResults: getFilteredQuotes(state),
     showSearchResults: state.showSearchResults,
   }),
   {

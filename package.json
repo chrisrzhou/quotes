@@ -16,6 +16,7 @@
     "test": "react-app-rewired test --env=jsdom"
   },
   "dependencies": {
+    "@chrisrzhou/ui": "https://github.com/chrisrzhou/ui",
     "normalize-newline": "^3.0.0",
     "react": "^16.5.2",
     "react-app-rewired": "^1.6.2",

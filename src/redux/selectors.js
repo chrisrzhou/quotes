@@ -10,7 +10,7 @@ const sortDescendingByCount = countMap => {
   });
 };
 
-export const getSearchResults = state => {
+export const getFilteredQuotes = state => {
   const {quotes, selectedAuthor, selectedTag, searchString} = state;
   const RE_SEARCH_STRING = new RegExp(searchString, 'i');
   return quotes.filter(quote => {
