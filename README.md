@@ -1,6 +1,6 @@
-# Quotes
+# Quoter
 
-https://quotes.chrisrzhou.io
+https://quoter.chrisrzhou.io
 
 [![MIT License][license-badge]](LICENSE.md)
 
@@ -34,14 +34,14 @@ This project focuses on the simplicity of writing quotes in markdown, and provid
 
 This project helps me set up a common place to store quotes using a convenient markdown format. It is easy to view the readable markdown file, or use the accompanying UI to explore quotes by author and tags. I also wanted to take this project as an opportunity to write a babel loader that parses the markdown file into structured javascript data.
 
-## Write quotes
+## Writing quotes
 
 Write your quotes in simple markdown in the [quotes.md](./src/quotes.md) file, using the standardized markdown blockquote notation, and intuitive notations for mentioning authors and adding hashtags:
 
 ```
 > Not everything that can be counted counts, and not everything that counts can be counted. @Einstein #physics #universe
 
-> I love quotes! @Chris Zhou #me
+> I love Quoter! @Chris Zhou #me
 ```
 
 ## Developing and building
@@ -55,7 +55,7 @@ yarn start
 You can build and deploy the production app by running:
 
 ```sh
-git clone git@github.com:chrisrzhou/quotes.git
+git clone git@github.com:chrisrzhou/quoter.git
 yarn
 yarn build
 # serve build folder
@@ -63,4 +63,4 @@ yarn build
 
 Or, you can deploy to Netlify by hitting the button below:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chrisrzhou/quotes)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chrisrzhou/quoter)

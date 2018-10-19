@@ -18,6 +18,6 @@ export default () => (
     px={2}
     py={1}>
     <Logo size={24} />
-    <Link href="https://github.com/chrisrzhou/quotes">Github</Link>
+    <Link href="https://github.com/chrisrzhou/quoter">Github</Link>
   </Flex>
 );

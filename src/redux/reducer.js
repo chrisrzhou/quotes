@@ -14,6 +14,7 @@ const createReducer = (initialState, handlers) => {
 
 const getInitialState = () => ({
   quotes: quotes.map(quote => ({...quote, id: shortid()})),
+  paused: false,
   searchString: null,
   selectedAuthor: null,
   selectedQuoteIndex: 0,
@@ -22,6 +23,10 @@ const getInitialState = () => ({
 });
 
 export default createReducer(getInitialState(), {
+  [actionTypes.PAUSE]: (state, {payload: paused}) => ({
+    ...state,
+    paused,
+  }),
   [actionTypes.RESET]: (state, _action) => ({
     ...getInitialState(),
     selectedQuoteIndex: state.selectedQuoteIndex,

@@ -1,11 +1,10 @@
-import {reset, selectQuote, setShowSearchResults} from 'redux/actions';
+import {pause, reset, selectQuote, setShowSearchResults} from 'redux/actions';
 
 import {Box} from 'rebass';
 import Footer from './Footer';
+import Nav from './Nav';
 import Quote from './Quote';
 import React from 'react';
-import Search from './Search';
-import SearchResults from './SearchResults';
 import {colors} from 'styles';
 import {connect} from 'react-redux';
 
@@ -37,15 +36,15 @@ class App extends React.PureComponent {
           color: ${colors.primary};
           overflow: hidden;
         `}>
+        <Nav />
         <Quote quote={quotes[selectedQuoteIndex]} />
-        <Search />
-        <SearchResults />
         <Footer />
       </Box>
     );
   }
 
   _handleHotKey = ({keyCode}) => {
+    const {paused, onPause, onSetShowSearchResults} = this.props;
     switch (keyCode) {
       case KEY_CODES.R:
         this.props.onReset();
@@ -58,13 +57,15 @@ class App extends React.PureComponent {
         break;
       case KEY_CODES.ESC:
       case KEY_CODES.S:
-        this.props.onSetShowSearchResults();
+        onSetShowSearchResults();
         break;
       case KEY_CODES.SPACE:
-        if (this._interval) {
-          this._endInterval();
-        } else {
+        if (paused) {
+          onPause(false);
           this._startInterval();
+        } else {
+          onPause(true);
+          this._endInterval();
         }
         break;
     }
@@ -98,9 +99,11 @@ class App extends React.PureComponent {
 export default connect(
   state => ({
     selectedQuoteIndex: state.selectedQuoteIndex,
+    paused: state.paused,
     quotes: state.quotes,
   }),
   {
+    onPause: pause,
     onReset: reset,
     onSetShowSearchResults: setShowSearchResults,
     onSelectQuote: selectQuote,

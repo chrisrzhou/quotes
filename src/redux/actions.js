@@ -12,6 +12,7 @@ const createAction = type => payload => ({
 });
 
 export const actionTypes = createActionTypes('quotes', [
+  'PAUSE',
   'RESET',
   'SEARCH',
   'SELECT_AUTHOR',
@@ -19,6 +20,8 @@ export const actionTypes = createActionTypes('quotes', [
   'SELECT_TAG',
   'SET_SHOW_SEARCH_RESULTS',
 ]);
+
+export const pause = createAction(actionTypes.PAUSE);
 
 export const reset = createAction(actionTypes.RESET);
 
