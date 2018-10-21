@@ -18,7 +18,7 @@ export const actionTypes = createActionTypes('quotes', [
   'SELECT_AUTHOR',
   'SELECT_QUOTE',
   'SELECT_TAG',
-  'SET_SHOW_SEARCH_RESULTS',
+  'SET_MENU_MODE',
 ]);
 
 export const pause = createAction(actionTypes.PAUSE);
@@ -33,6 +33,4 @@ export const selectQuote = createAction(actionTypes.SELECT_QUOTE);
 
 export const selectTag = createAction(actionTypes.SELECT_TAG);
 
-export const setShowSearchResults = createAction(
-  actionTypes.SET_SHOW_SEARCH_RESULTS,
-);
+export const setMenuMode = createAction(actionTypes.SET_MENU_MODE);

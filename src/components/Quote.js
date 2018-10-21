@@ -3,8 +3,10 @@ import {selectAuthor, selectTag} from 'redux/actions';
 
 import ClickableText from './ui/ClickableText';
 import React from 'react';
+import Row from './ui/Row';
 import {colors} from 'styles';
 import {connect} from 'react-redux';
+import {getQuote} from 'redux/selectors';
 
 const Quote = ({quote, onSelectAuthor, onSelectTag}) => {
   const {author, content, id, tags} = quote;
@@ -64,30 +66,24 @@ const Quote = ({quote, onSelectAuthor, onSelectTag}) => {
           {content}
         </Text>
       </blockquote>
-      <ClickableText
-        onClick={() => {
-          onSelectAuthor(author);
-        }}>
-        — {author || 'Unknown'}
+      <ClickableText mb={2} onClick={() => onSelectAuthor(author)}>
+        @{author || 'Unknown'}
       </ClickableText>
-      <Flex mt={[2, 3]}>
+      <Row align="left">
         {tags.map(tag => (
-          <ClickableText
-            key={tag}
-            ml={[1, 2]}
-            onClick={() => {
-              onSelectTag(tag);
-            }}>
+          <ClickableText key={tag} onClick={() => onSelectTag(tag)}>
             #{tag}
           </ClickableText>
         ))}
-      </Flex>
+      </Row>
     </Flex>
   );
 };
 
 export default connect(
-  null,
+  state => ({
+    quote: getQuote(state),
+  }),
   {
     onSelectAuthor: selectAuthor,
     onSelectTag: selectTag,

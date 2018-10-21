@@ -15,9 +15,9 @@ export default () => (
       right: 0;
     `}
     justifyContent="space-between"
-    px={2}
+    px={3}
     py={1}>
     <Logo size={24} />
-    <Link href="https://github.com/chrisrzhou/quoter">Github</Link>
+    <Link href="https://github.com/chrisrzhou/quotes">Github</Link>
   </Flex>
 );

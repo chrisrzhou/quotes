@@ -1,10 +1,10 @@
 {
-  "name": "quoter",
+  "name": "quotes",
   "version": "0.1.0",
   "description": "Manage and view your favorite quotes",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chrisrzhou/quoter"
+    "url": "https://github.com/chrisrzhou/quotes"
   },
   "author": "Chris Zhou <christopher.r.zhou@gmail.com>",
   "license": "MIT",

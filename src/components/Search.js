@@ -14,9 +14,7 @@ const Search = ({
   tags,
 }) => {
   return (
-    <div style={{opacity: 0.1}}>
-      {JSON.stringify(authors, null, 2)}
-      {JSON.stringify(tags, null, 2)}
+    <div>
       <input
         onChange={e => {
           onSearch(e.target.value);

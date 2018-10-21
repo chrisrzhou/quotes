@@ -1,6 +1,6 @@
-# Quoter
+# Quotes
 
-https://quoter.chrisrzhou.io
+https://quotes.chrisrzhou.io
 
 [![MIT License][license-badge]](LICENSE.md)
 
@@ -11,18 +11,11 @@ View and search for [quotes](./src/quotes.md) written in markdown.
 ## TODO
 
 - [ ] Build SearchResults component
-  - A vertical component allowing viewing of
-    - tags
-    - authors
-    - quote contents
-  - clear button
-  - select into Quotes
-  - mobile-friendly
-  - pause auto-quotes when searching
 - [ ] Handle parser for edge cases (allow up to one newline for new blockquotes)
 - [ ] Allow autoplaying for filtered quotes (show currentQuoteNumber / filteredQuotesCount)
 - [ ] Share quotes on twitter/fb (social buttons)
-- [ ] View/edit quotes.md source file on GH
+- [ ] screensaver support (Mac/PC/Linux)
+- [ ] swipe support
 
 ## About
 
@@ -41,7 +34,7 @@ Write your quotes in simple markdown in the [quotes.md](./src/quotes.md) file, u
 ```
 > Not everything that can be counted counts, and not everything that counts can be counted. @Einstein #physics #universe
 
-> I love Quoter! @Chris Zhou #me
+> I love Quotes! @Chris Zhou #me
 ```
 
 ## Developing and building
@@ -55,7 +48,7 @@ yarn start
 You can build and deploy the production app by running:
 
 ```sh
-git clone git@github.com:chrisrzhou/quoter.git
+git clone git@github.com:chrisrzhou/quotes.git
 yarn
 yarn build
 # serve build folder
@@ -63,4 +56,4 @@ yarn build
 
 Or, you can deploy to Netlify by hitting the button below:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chrisrzhou/quoter)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chrisrzhou/quotes)

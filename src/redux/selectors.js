@@ -1,13 +1,11 @@
 const sortDescendingByCount = countMap => {
   return Object.values(countMap).sort((a, b) => {
-    if (a.count < b.count) {
-      return 1;
-    }
-    if (b.count > a.count) {
-      return -1;
-    }
-    return 0;
+    return b.count - a.count;
   });
+};
+
+export const getQuote = state => {
+  return state.quotes[state.selectedQuoteIndex];
 };
 
 export const getFilteredQuotes = state => {

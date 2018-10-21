@@ -1,18 +1,18 @@
 import React from 'react';
-import {Text} from 'rebass';
+import Text from './Text';
 import {colors} from 'styles';
 
-export default ({children, onClick, ...otherProps}) => (
+export default ({active, children, onClick, ...otherProps}) => (
   <Text
     css={`
-      color: ${colors.secondary};
+      color: ${active ? colors.hover : colors.secondary};
       cursor: pointer;
 
       :hover {
         color: ${colors.hover};
       }
     `}
-    fontSize={[16, 24]}
+    fontWeight={active ? 'bold' : undefined}
     onClick={onClick}
     {...otherProps}>
     {children}

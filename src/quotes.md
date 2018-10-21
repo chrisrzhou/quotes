@@ -1,6 +1,6 @@
 > God grant me the serenity to accept the things I cannot change, courage to change the things I can, and the wisdom to know the difference.
 
-@Serenity Prayer 1 #bible #serenity #wisdom
+@Serenity Prayer #bible #serenity #wisdom
 
 > They claim their labours are to build a heaven, yet their heaven is populated with horrors. Perhaps the world is not made. Perhaps nothing is made. A clock without a craftsman.
 
@@ -58,7 +58,7 @@
 
 @Frank Herbert #dune #logic #universe
 
-> For whoever has not known himself knows nothing, but he why has know himself has already understood the depth of all things.
+> For whoever has not known himself knows nothing, but he who has known himself has already understood the depth of all things.
 
 @Thich Nhat Hanh #knowledge #enlightenment #self
 

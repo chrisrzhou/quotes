@@ -19,13 +19,13 @@ const getInitialState = () => ({
   selectedAuthor: null,
   selectedQuoteIndex: 0,
   selectedTag: null,
-  showSearchResults: false,
+  menuMode: null,
 });
 
 export default createReducer(getInitialState(), {
   [actionTypes.PAUSE]: (state, {payload: paused}) => ({
     ...state,
-    paused,
+    paused: paused === undefined ? !state.paused : paused,
   }),
   [actionTypes.RESET]: (state, _action) => ({
     ...getInitialState(),
@@ -34,12 +34,12 @@ export default createReducer(getInitialState(), {
   [actionTypes.SEARCH]: (state, {payload: searchString}) => ({
     ...state,
     searchString,
-    showSearchResults: true,
+    menuMode: 'quote',
   }),
   [actionTypes.SELECT_AUTHOR]: (state, {payload: selectedAuthor}) => ({
     ...state,
     selectedAuthor,
-    showSearchResults: true,
+    menuMode: 'quote',
   }),
   [actionTypes.SELECT_QUOTE]: (state, {payload: selectedQuoteIndex}) => ({
     ...state,
@@ -48,16 +48,10 @@ export default createReducer(getInitialState(), {
   [actionTypes.SELECT_TAG]: (state, {payload: selectedTag}) => ({
     ...state,
     selectedTag,
-    showSearchResults: true,
+    menuMode: 'quote',
   }),
-  [actionTypes.SET_SHOW_SEARCH_RESULTS]: (
-    state,
-    {payload: showSearchResults},
-  ) => ({
+  [actionTypes.SET_MENU_MODE]: (state, {payload: menuMode}) => ({
     ...state,
-    showSearchResults:
-      showSearchResults === undefined
-        ? !state.showSearchResults
-        : showSearchResults,
+    menuMode: menuMode === state.menuMode ? null : menuMode,
   }),
 });
