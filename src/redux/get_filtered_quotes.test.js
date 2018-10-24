@@ -23,25 +23,11 @@ test('nothing to filter (empty search inputs)', () => {
       tags: [],
     },
   ];
-  expect(getFilteredQuotes({quotes})).toEqual([
-    {
-      content: 'a',
-      tags: [],
-    },
-    {
-      content: 'b',
-      tags: [],
-    },
-    {
-      content: 'c',
-      tags: [],
-    },
-  ]);
   expect(
     getFilteredQuotes({
       quotes,
-      selectedAuthor: '',
-      selectedTag: '',
+      selectedAuthors: [],
+      selectedTags: [],
       searchString: '',
     }),
   ).toEqual([
@@ -83,6 +69,8 @@ test('filter by searchString (insensitive)', () => {
     getFilteredQuotes({
       quotes,
       searchString: 'a',
+      selectedAuthors: [],
+      selectedTags: [],
     }),
   ).toEqual([
     {
@@ -102,6 +90,8 @@ test('filter by searchString (insensitive)', () => {
     getFilteredQuotes({
       quotes,
       searchString: 'AA',
+      selectedAuthors: [],
+      selectedTags: [],
     }),
   ).toEqual([
     {
@@ -136,7 +126,8 @@ test('filter by author', () => {
   expect(
     getFilteredQuotes({
       quotes,
-      selectedAuthor: 'x',
+      selectedAuthors: ['x'],
+      selectedTags: [],
     }),
   ).toEqual([
     {
@@ -153,13 +144,37 @@ test('filter by author', () => {
   expect(
     getFilteredQuotes({
       quotes,
-      selectedAuthor: 'y',
+      selectedAuthors: ['y'],
+      selectedTags: [],
     }),
   ).toEqual([
     {
       author: 'y',
       content: 'baa',
       tags: [],
+    },
+  ]);
+  expect(
+    getFilteredQuotes({
+      quotes,
+      selectedAuthors: ['x', 'y'],
+      selectedTags: [],
+    }),
+  ).toEqual([
+    {
+      author: 'x',
+      content: 'a',
+      tags: ['tag1', 'tag2'],
+    },
+    {
+      author: 'y',
+      content: 'baa',
+      tags: [],
+    },
+    {
+      author: 'x',
+      content: 'c',
+      tags: ['tag3'],
     },
   ]);
 });
@@ -186,7 +201,8 @@ test('filter by tags', () => {
   expect(
     getFilteredQuotes({
       quotes,
-      selectedTag: 'tag1',
+      selectedAuthors: [],
+      selectedTags: ['tag1'],
     }),
   ).toEqual([
     {
@@ -201,7 +217,8 @@ test('filter by tags', () => {
   expect(
     getFilteredQuotes({
       quotes,
-      selectedTag: 'tag3',
+      selectedAuthors: [],
+      selectedTags: ['tag3'],
     }),
   ).toEqual([
     {
@@ -242,7 +259,8 @@ test('filter by all combinations', () => {
     getFilteredQuotes({
       quotes,
       searchString: 'a',
-      selectedTag: 'tag1',
+      selectedAuthors: [],
+      selectedTags: ['tag1'],
     }),
   ).toEqual([
     {
@@ -259,9 +277,9 @@ test('filter by all combinations', () => {
   expect(
     getFilteredQuotes({
       quotes,
-      selectedAuthor: 'x',
+      selectedAuthors: ['x'],
       searchString: 'a',
-      selectedTag: 'tag1',
+      selectedTags: ['tag1'],
     }),
   ).toEqual([
     {
@@ -273,7 +291,8 @@ test('filter by all combinations', () => {
   expect(
     getFilteredQuotes({
       quotes,
-      selectedAuthor: 'y',
+      selectedAuthors: ['y'],
+      selectedTags: [],
       searchString: 'c',
     }),
   ).toEqual([
@@ -291,9 +310,9 @@ test('filter by all combinations', () => {
   expect(
     getFilteredQuotes({
       quotes,
-      selectedAuthor: 'y',
+      selectedAuthors: ['y'],
       searchString: 'c',
-      selectedTag: 'tag1',
+      selectedTags: ['tag1'],
     }),
   ).toEqual([
     {
@@ -305,22 +324,24 @@ test('filter by all combinations', () => {
   expect(
     getFilteredQuotes({
       quotes,
-      selectedAuthor: 'y',
-      searchString: 'c',
-      selectedTag: 'badtag',
-    }),
-  ).toEqual([]);
-  expect(
-    getFilteredQuotes({
-      quotes,
-      selectedAuthor: 'badauthor',
+      selectedAuthors: ['y'],
+      selectedTags: ['badtag'],
       searchString: 'c',
     }),
   ).toEqual([]);
   expect(
     getFilteredQuotes({
       quotes,
-      selectedAuthor: 'y',
+      selectedAuthors: ['badauthor'],
+      selectedTags: [],
+      searchString: 'c',
+    }),
+  ).toEqual([]);
+  expect(
+    getFilteredQuotes({
+      quotes,
+      selectedAuthors: ['y'],
+      selectedTags: [],
       searchString: 'badcontent',
     }),
   ).toEqual([]);

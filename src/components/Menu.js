@@ -1,21 +1,12 @@
+import {Flex, Text} from 'rebass';
 import {getAuthors, getTags} from 'redux/selectors';
-import {
-  search,
-  selectAuthor,
-  selectQuote,
-  selectTag,
-  setMenuMode,
-} from 'redux/actions';
+import {search, selectAuthor, selectTag, setMenuMode} from 'redux/actions';
 
-import ClickableText from './ui/ClickableText';
-import {Flex} from 'rebass';
 import Hotkeys from './Hotkeys';
-import Item from './ui/Item';
-import ItemList from './ui/ItemList';
+import NavItem from './ui/NavItem';
 import React from 'react';
-import Row from './ui/Row';
-import Search from './Search';
-import Text from './ui/Text';
+import SearchResults from './SearchResults';
+import TokenList from './ui/TokenList';
 import {colors} from 'styles';
 import {connect} from 'react-redux';
 
@@ -24,12 +15,11 @@ const Menu = ({
   menuMode,
   onSearch,
   onSelectAuthor,
-  onSelectQuote,
   onSelectTag,
   onSetMenuMode,
   searchString,
-  selectedAuthor,
-  selectedTag,
+  selectedAuthors,
+  selectedTags,
   tags,
 }) => {
   if (!menuMode) {
@@ -39,72 +29,36 @@ const Menu = ({
   let title;
   switch (menuMode) {
     case 'quote':
-      content = <Search />;
+      content = <SearchResults />;
       title = (
-        <div>
-          Search quotes
-          <Row align="left">
-            {selectedAuthor ? (
-              <Item
-                label={`@${selectedAuthor}`}
-                onClear={() => onSelectAuthor()}
-                onClick={() => onSetMenuMode('author')}
-              />
-            ) : (
-              <Item
-                label="filter authors"
-                onClick={() => onSetMenuMode('author')}
-              />
-            )}
-            {selectedTag ? (
-              <Item
-                label={`#${selectedTag}`}
-                onClear={() => onSelectTag()}
-                onClick={() => onSetMenuMode('tag')}
-              />
-            ) : (
-              <Item label="filter tags" onClick={() => onSetMenuMode('tag')} />
-            )}
-          </Row>
-        </div>
+        <input
+          onChange={e => {
+            onSearch(e.target.value);
+          }}
+          value={searchString}
+        />
       );
+
       break;
     case 'author':
       content = (
-        <ItemList
+        <TokenList
           items={authors}
-          selectedItem={selectedAuthor}
+          selectedItem={selectedAuthors}
           onSelectItem={onSelectAuthor}
         />
       );
-      title = (
-        <div>
-          Filter by author
-          {selectedAuthor && (
-            <Item
-              label={`@${selectedAuthor}`}
-              onClear={() => onSelectAuthor()}
-            />
-          )}
-        </div>
-      );
+      title = 'Filter authors';
       break;
     case 'tag':
       content = (
-        <ItemList
+        <TokenList
           items={tags}
-          selectedItem={selectedTag}
+          selectedItem={selectedTags}
           onSelectItem={onSelectTag}
         />
       );
-      title = (
-        <div>
-          Filter by tags
-          {selectedTag && (
-            <Item label={`#${selectedTag}`} onClear={() => onSelectTag()} />
-          )}
-        </div>
-      );
+      title = 'Filter tags';
       break;
     case 'help':
       content = <Hotkeys />;
@@ -115,7 +69,7 @@ const Menu = ({
   }
   return (
     <Flex
-      bg="white"
+      bg={colors.white}
       css={`
         animation: menuslide 1s ease;
         position: fixed;
@@ -141,15 +95,16 @@ const Menu = ({
       flexDirection="column"
       p={3}>
       <Flex
+        alignItems="center"
         css={`
           flex-shrink: 0;
         `}
         justifyContent="space-between"
         mb="2">
-        <Text fontWeight="bold">{title}</Text>
-        <ClickableText fontWeight="bold" onClick={() => onSetMenuMode()}>
-          back
-        </ClickableText>
+        <Text fontSize={24} fontWeight="bold">
+          {title}
+        </Text>
+        <NavItem label="✕" onClick={() => onSetMenuMode()} />
       </Flex>
       <Flex
         css={`
@@ -178,14 +133,13 @@ export default connect(
     authors: getAuthors(state),
     menuMode: state.menuMode,
     searchString: state.searchString,
-    selectedAuthor: state.selectedAuthor,
-    selectedTag: state.selectedTag,
+    selectedAuthors: state.selectedAuthors,
+    selectedTags: state.selectedTags,
     tags: getTags(state),
   }),
   {
     onSearch: search,
     onSelectAuthor: selectAuthor,
-    onSelectQuote: selectQuote,
     onSelectTag: selectTag,
     onSetMenuMode: setMenuMode,
   },

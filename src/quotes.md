@@ -73,3 +73,15 @@
 > Dialogue must be practiced on the basis of "non-self". We have to allow what is good, beautiful, and meaningful in the other's tradition to transform us.
 
 @Thich Nhat Hanh #enlightenment #dialogue
+
+> If there's anything that can redeem a lost soul, love would have to top the list
+
+@Sister Maggie #daredevil #love
+
+> When someone in need tries to push you away, you have to find the strength to hold on tighter
+
+@Sister Maggie #daredevil #support
+
+> Everything will be okay in the end. If it's not okay, then it's not the end.
+
+@John Lennon #optimism

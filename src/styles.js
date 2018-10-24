@@ -2,5 +2,6 @@ export const colors = {
   primary: '#5b6167',
   secondary: '#bfc6cf',
   hover: '#8dbbf5',
-  wash: '#F8F8F8',
+  wash: '#f8f8f8',
+  white: '#ffffff',
 };

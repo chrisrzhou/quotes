@@ -12,7 +12,7 @@ const createAction = type => payload => ({
 });
 
 export const actionTypes = createActionTypes('quotes', [
-  'PAUSE',
+  'TOGGLE_PAUSE',
   'RESET',
   'SEARCH',
   'SELECT_AUTHOR',
@@ -21,7 +21,7 @@ export const actionTypes = createActionTypes('quotes', [
   'SET_MENU_MODE',
 ]);
 
-export const pause = createAction(actionTypes.PAUSE);
+export const togglePause = createAction(actionTypes.TOGGLE_PAUSE);
 
 export const reset = createAction(actionTypes.RESET);
 

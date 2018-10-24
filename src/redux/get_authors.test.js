@@ -19,7 +19,7 @@ test('returns empty array for no authors', () => {
   ).toEqual([]);
 });
 
-test('Correctly dedupes authors', () => {
+test('dedupes authors', () => {
   expect(
     getAuthors({
       quotes: [
@@ -39,8 +39,39 @@ test('Correctly dedupes authors', () => {
       ],
     }),
   ).toEqual([
-    {count: 2, value: 'a'},
-    {count: 1, value: 'b'},
-    {count: 1, value: 'c'},
+    {count: 2, isSelected: false, value: 'a'},
+    {count: 1, isSelected: false, value: 'b'},
+    {count: 1, isSelected: false, value: 'c'},
+  ]);
+});
+
+test('sorts by selected authors first, and then by counts', () => {
+  expect(
+    getAuthors({
+      quotes: [
+        {
+          author: 'a',
+        },
+        {
+          author: 'b',
+        },
+        {},
+        {
+          author: 'a',
+        },
+        {
+          author: 'c',
+        },
+        {
+          author: 'd',
+        },
+      ],
+      selectedAuthors: ['c', 'a', 'd'],
+    }),
+  ).toEqual([
+    {count: 2, isSelected: true, value: 'a'},
+    {count: 1, isSelected: true, value: 'c'},
+    {count: 1, isSelected: true, value: 'd'},
+    {count: 1, isSelected: false, value: 'b'},
   ]);
 });

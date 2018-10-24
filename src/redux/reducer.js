@@ -15,43 +15,51 @@ const createReducer = (initialState, handlers) => {
 const getInitialState = () => ({
   quotes: quotes.map(quote => ({...quote, id: shortid()})),
   paused: false,
-  searchString: null,
-  selectedAuthor: null,
+  searchString: '',
+  selectedAuthors: [],
   selectedQuoteIndex: 0,
-  selectedTag: null,
+  selectedTags: [],
   menuMode: null,
 });
 
 export default createReducer(getInitialState(), {
-  [actionTypes.PAUSE]: (state, {payload: paused}) => ({
+  [actionTypes.TOGGLE_PAUSE]: (state, {payload}) => ({
     ...state,
-    paused: paused === undefined ? !state.paused : paused,
+    paused: payload === undefined ? !state.paused : payload,
   }),
   [actionTypes.RESET]: (state, _action) => ({
     ...getInitialState(),
     selectedQuoteIndex: state.selectedQuoteIndex,
   }),
-  [actionTypes.SEARCH]: (state, {payload: searchString}) => ({
+  [actionTypes.SEARCH]: (state, {payload}) => ({
     ...state,
-    searchString,
+    searchString: payload,
     menuMode: 'quote',
   }),
-  [actionTypes.SELECT_AUTHOR]: (state, {payload: selectedAuthor}) => ({
+  [actionTypes.SELECT_QUOTE]: (state, {payload}) => ({
     ...state,
-    selectedAuthor,
-    menuMode: 'quote',
+    selectedQuoteIndex: payload,
   }),
-  [actionTypes.SELECT_QUOTE]: (state, {payload: selectedQuoteIndex}) => ({
+  [actionTypes.SELECT_AUTHOR]: (state, {payload}) => {
+    const {selectedAuthors} = state;
+    return {
+      ...state,
+      selectedAuthors: selectedAuthors.includes(payload)
+        ? selectedAuthors.filter(author => author !== payload)
+        : [...selectedAuthors, payload],
+    };
+  },
+  [actionTypes.SELECT_TAG]: (state, {payload}) => {
+    const {selectedTags} = state;
+    return {
+      ...state,
+      selectedTags: selectedTags.includes(payload)
+        ? selectedTags.filter(tag => tag !== payload)
+        : [...selectedTags, payload],
+    };
+  },
+  [actionTypes.SET_MENU_MODE]: (state, {payload}) => ({
     ...state,
-    selectedQuoteIndex,
-  }),
-  [actionTypes.SELECT_TAG]: (state, {payload: selectedTag}) => ({
-    ...state,
-    selectedTag,
-    menuMode: 'quote',
-  }),
-  [actionTypes.SET_MENU_MODE]: (state, {payload: menuMode}) => ({
-    ...state,
-    menuMode: menuMode === state.menuMode ? null : menuMode,
+    menuMode: payload === state.menuMode ? null : payload,
   }),
 });

@@ -1,4 +1,4 @@
-import {pause, reset, selectQuote, setMenuMode} from 'redux/actions';
+import {reset, selectQuote, setMenuMode, togglePause} from 'redux/actions';
 
 import {Flex} from 'rebass';
 import Link from './ui/Link';
@@ -10,22 +10,25 @@ import {connect} from 'react-redux';
 class Nav extends React.PureComponent {
   componentDidMount() {
     window.addEventListener('keydown', this._handleHotKey, false);
-    this._startInterval();
+    this._handlePause();
+  }
+
+  componentDidUpdate() {
+    this._handlePause();
   }
 
   componentWillUnmount() {
     window.removeEventListener('keydown', this._handleHotKey, false);
-    this._endInterval();
+    clearInterval(this._interval);
   }
 
   render() {
     const {
+      activeAuthors,
+      activeTags,
       paused,
-      onPause,
+      onTogglePause,
       onSetMenuMode,
-      searchString,
-      selectedAuthor,
-      selectedTag,
     } = this.props;
     return (
       <Flex
@@ -39,18 +42,14 @@ class Nav extends React.PureComponent {
         justifyContent="space-between"
         p={3}>
         <Row align="left">
+          <NavItem label="Q" onClick={() => onSetMenuMode('quote')} />
           <NavItem
-            active={searchString || selectedAuthor || selectedTag}
-            label="Q"
-            onClick={() => onSetMenuMode('quote')}
-          />
-          <NavItem
-            active={selectedAuthor}
+            active={activeAuthors}
             label="@"
             onClick={() => onSetMenuMode('author')}
           />
           <NavItem
-            active={selectedTag}
+            active={activeTags}
             label="#"
             onClick={() => onSetMenuMode('tag')}
           />
@@ -61,11 +60,11 @@ class Nav extends React.PureComponent {
             label={
               paused ? <span>&#9658;</span> : <span>&#10073;&#10073;</span>
             }
-            onClick={() => onPause()}
+            onClick={() => onTogglePause()}
           />
           <Link
             external
-            href="https://github.com/chrisrzhou/quotes/src/quotes.md">
+            href="https://github.com/chrisrzhou/quotes/blob/master/src/quotes.md">
             <NavItem label="</>" />
           </Link>
         </Row>
@@ -74,7 +73,7 @@ class Nav extends React.PureComponent {
   }
 
   _handleHotKey = e => {
-    const {paused, onPause, onSetMenuMode} = this.props;
+    const {onTogglePause, onSetMenuMode} = this.props;
     if (e.key.toLowerCase() !== 'escape' && e.target.localName === 'input') {
       return;
     }
@@ -105,26 +104,21 @@ class Nav extends React.PureComponent {
         onSetMenuMode('help');
         break;
       case ' ':
-        if (paused) {
-          this._startInterval();
-        } else {
-          this._endInterval();
-        }
-        onPause();
+        onTogglePause();
         break;
       default:
         break;
     }
   };
 
-  _startInterval = () => {
-    this._interval = setInterval(this._nextQuote, 20000);
-  };
-
-  _endInterval = () => {
-    if (this._interval) {
+  _handlePause = () => {
+    if (this.props.paused) {
       clearInterval(this._interval);
       this._interval = undefined;
+    } else {
+      if (!this._interval) {
+        this._interval = setInterval(this._nextQuote, 10000);
+      }
     }
   };
 
@@ -144,14 +138,14 @@ class Nav extends React.PureComponent {
 
 export default connect(
   state => ({
-    selectedAuthor: state.selectedAuthor,
+    activeAuthors: state.selectedAuthors.length > 0,
+    activeTags: state.selectedTags.length > 0,
     selectedQuoteIndex: state.selectedQuoteIndex,
-    selectedTag: state.selectedTag,
     quotes: state.quotes,
     paused: state.paused,
   }),
   {
-    onPause: pause,
+    onTogglePause: togglePause,
     onReset: reset,
     onSetMenuMode: setMenuMode,
     onSelectQuote: selectQuote,

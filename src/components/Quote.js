@@ -59,7 +59,7 @@ const Quote = ({quote, onSelectAuthor, onSelectTag}) => {
       justifyContent="center"
       key={id}
       m="0 auto"
-      p={4}
+      p={3}
       width={['100%', '80%']}>
       <blockquote>
         <Text fontSize={[16, 32]} textAlign="center">
