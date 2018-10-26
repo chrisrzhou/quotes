@@ -11,17 +11,23 @@ export const getQuote = state => {
 export const getFilteredQuotes = state => {
   const {quotes, selectedAuthors, selectedTags, searchString} = state;
   const RE_SEARCH_STRING = new RegExp(searchString, 'i');
-  return Object.values(quotes).filter(quote => {
-    if (
-      (selectedAuthors.length > 0 && !selectedAuthors.includes(quote.author)) ||
-      (selectedTags.length > 0 &&
-        !quote.tags.some(tag => selectedTags.includes(tag))) ||
-      (searchString && !quote.content.match(RE_SEARCH_STRING))
-    ) {
+  return Object.values(quotes)
+    .filter(quote => {
+      if (
+        (selectedAuthors.length === 0 && selectedTags.length === 0) ||
+        (selectedAuthors.length > 0 &&
+          selectedAuthors.includes(quote.author)) ||
+        (selectedTags.length > 0 &&
+          quote.tags.some(tag => selectedTags.includes(tag)))
+      ) {
+        return (
+          !searchString ||
+          (searchString && quote.content.match(RE_SEARCH_STRING))
+        );
+      }
       return false;
-    }
-    return true;
-  });
+    })
+    .slice(0, 100);
 };
 
 export const getAuthors = state => {

@@ -1,7 +1,7 @@
 import {Flex} from 'rebass';
 import React from 'react';
 
-export default ({children, align}) => (
+export default ({children, align, ...otherProps}) => (
   <Flex
     alignItems="center"
     css={`
@@ -14,7 +14,8 @@ export default ({children, align}) => (
         }
       }
     `}
-    flexWrap="wrap">
+    flexWrap="wrap"
+    {...otherProps}>
     {children}
   </Flex>
 );

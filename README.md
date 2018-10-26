@@ -12,12 +12,6 @@ Deploy an instance of this project by clicking the deploy button below. Add and 
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chrisrzhou/quotes)
 
-## TODO
-
-- [ ] Share quotes on twitter/fb (social buttons)
-- [ ] screensaver support (Mac/PC/Linux)
-- [ ] swipe support
-
 ## About
 
 Everyone loves inspirational quotes, but documenting and viewing them is a fairly disorganized process. Quotes are usually stored in many systems, and are difficult to search and organize over time.

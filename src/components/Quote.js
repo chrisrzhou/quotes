@@ -66,13 +66,10 @@ const Quote = ({quote, onSelectAuthor, onSelectTag}) => {
           {content}
         </Text>
       </blockquote>
-      <ClickableText
-        fontSize={[16, 24]}
-        mb={2}
-        onClick={() => onSelectAuthor(author)}>
+      <ClickableText fontSize={[16, 24]} onClick={() => onSelectAuthor(author)}>
         @{author || 'Unknown'}
       </ClickableText>
-      <Row align="left">
+      <Row align="left" my={2}>
         {tags.map(tag => (
           <ClickableText
             fontSize={[16, 24]}

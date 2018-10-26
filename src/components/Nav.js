@@ -1,12 +1,13 @@
-import {reset, selectQuote, setMenuMode, togglePause} from 'redux/actions';
+import {randomQuote, reset, setMenuMode, togglePause} from 'redux/actions';
 
 import {Flex} from 'rebass';
 import Link from './ui/Link';
 import NavItem from './ui/NavItem';
 import React from 'react';
 import Row from './ui/Row';
+import TweetShare from './TweetShare';
 import {connect} from 'react-redux';
-import {getFilteredQuotes} from 'redux/selectors';
+import {getQuote} from 'redux/selectors';
 
 class Nav extends React.PureComponent {
   componentDidMount() {
@@ -28,6 +29,7 @@ class Nav extends React.PureComponent {
       activeAuthors,
       activeTags,
       paused,
+      quote,
       onTogglePause,
       onSetMenuMode,
     } = this.props;
@@ -43,7 +45,8 @@ class Nav extends React.PureComponent {
           z-index: 1;
         `}
         justifyContent="space-between"
-        p={3}>
+        px={3}
+        py={2}>
         <Row align="left">
           <NavItem label="Q" onClick={() => onSetMenuMode('quote')} />
           <NavItem
@@ -64,12 +67,17 @@ class Nav extends React.PureComponent {
           />
         </Row>
         <Row align="right">
-          <NavItem label="?" onClick={() => onSetMenuMode('help')} />
+          <TweetShare
+            quote={quote.content}
+            author={quote.author}
+            tags={quote.tags}
+          />
           <Link
             external
             href="https://github.com/chrisrzhou/quotes/blob/master/src/quotes.md">
             <NavItem label="</>" />
           </Link>
+          <NavItem label="?" onClick={() => onSetMenuMode('help')} />
         </Row>
       </Flex>
     );
@@ -86,7 +94,7 @@ class Nav extends React.PureComponent {
         break;
       case 'arrowleft':
       case 'arrowright':
-        this._randomQuote();
+        this.props.onRandomQuote();
         break;
       case 'a':
         onSetMenuMode('author');
@@ -122,26 +130,19 @@ class Nav extends React.PureComponent {
       }
     }
   };
-
-  _randomQuote = () => {
-    const {quotes, onSelectQuote} = this.props;
-    if (quotes.length > 0) {
-      onSelectQuote(quotes[Math.floor(Math.random() * quotes.length)].id);
-    }
-  };
 }
 
 export default connect(
   state => ({
     activeAuthors: state.selectedAuthors.length > 0,
     activeTags: state.selectedTags.length > 0,
-    quotes: getFilteredQuotes(state),
+    quote: getQuote(state),
     paused: state.paused,
   }),
   {
     onTogglePause: togglePause,
     onReset: reset,
     onSetMenuMode: setMenuMode,
-    onSelectQuote: selectQuote,
+    onRandomQuote: randomQuote,
   },
 )(Nav);

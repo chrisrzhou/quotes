@@ -1,4 +1,5 @@
 import {actionTypes} from './actions';
+import {getFilteredQuotes} from './selectors';
 import quotesData from 'quotes.md';
 import shortid from 'shortid';
 
@@ -40,10 +41,16 @@ export default createReducer(getInitialState(), {
     ...state,
     selectedTags: [],
   }),
-  [actionTypes.TOGGLE_PAUSE]: (state, {payload}) => ({
-    ...state,
-    paused: payload === undefined ? !state.paused : payload,
-  }),
+  [actionTypes.RANDOM_QUOTE]: (state, _action) => {
+    const quotes = getFilteredQuotes(state);
+    if (quotes.length === 0) {
+      return state;
+    }
+    return {
+      ...state,
+      quoteId: quotes[Math.floor(Math.random() * quotes.length)].id,
+    };
+  },
   [actionTypes.RESET]: (state, _action) => ({
     ...getInitialState(),
     quoteId: state.quoteId,
@@ -81,5 +88,9 @@ export default createReducer(getInitialState(), {
     ...state,
     menuMode: payload === state.menuMode ? null : payload,
     searchString: '',
+  }),
+  [actionTypes.TOGGLE_PAUSE]: (state, {payload}) => ({
+    ...state,
+    paused: payload === undefined ? !state.paused : payload,
   }),
 });

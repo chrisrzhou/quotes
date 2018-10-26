@@ -15,6 +15,7 @@ export const actionTypes = createActionTypes('quotes', [
   'CLEAR_ALL_AUTHORS',
   'CLEAR_ALL_TAGS',
   'RESET',
+  'RANDOM_QUOTE',
   'SEARCH',
   'SELECT_AUTHOR',
   'SELECT_QUOTE',
@@ -27,7 +28,7 @@ export const clearAllAuthors = createAction(actionTypes.CLEAR_ALL_AUTHORS);
 
 export const clearAllTags = createAction(actionTypes.CLEAR_ALL_TAGS);
 
-export const togglePause = createAction(actionTypes.TOGGLE_PAUSE);
+export const randomQuote = createAction(actionTypes.RANDOM_QUOTE);
 
 export const reset = createAction(actionTypes.RESET);
 
@@ -40,3 +41,5 @@ export const selectQuote = createAction(actionTypes.SELECT_QUOTE);
 export const selectTag = createAction(actionTypes.SELECT_TAG);
 
 export const setMenuMode = createAction(actionTypes.SET_MENU_MODE);
+
+export const togglePause = createAction(actionTypes.TOGGLE_PAUSE);

@@ -5,7 +5,7 @@ import {colors} from 'styles';
 export default ({matchString, text, onClick}) => {
   const split = text.split(new RegExp(matchString, 'gi'));
   const matched = text.match(new RegExp(matchString, 'gi'));
-  if (!matchString || split.length === 1) {
+  if (!matchString || matchString.length < 2 || split.length === 1) {
     return <Text onClick={onClick}>{text}</Text>;
   }
   let tokens = [];

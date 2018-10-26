@@ -47,17 +47,24 @@ const Menu = ({
           css={`
             width: 100%;
             input {
-              border: 2px solid ${colors.wash};
+              background: ${colors.wash};
+              border: 1px solid ${colors.wash};
+              border-radius: 8px;
+              font-family: 'Source Serif Pro', serif;
               font-size: ${MENU_FONT_SIZE}px;
               line-height: 1.6;
+              padding: 8px;
+              transition: all 0.5s ease-in-out
               width: 100%;
 
               :focus {
+                background: ${colors.white};
+                border: 1px solid ${colors.hover};
                 outline: none;
               }
             }
           `}
-          pr={2}>
+          pr={3}>
           <input
             onChange={e => {
               onSearch(e.target.value);
@@ -67,7 +74,6 @@ const Menu = ({
           />
         </Box>
       );
-
       break;
     case 'author':
       content = (
@@ -118,7 +124,7 @@ const Menu = ({
     <Flex
       bg={colors.white}
       css={`
-        animation: menuslide 1s ease-in-out;
+        animation: menuslide 1.5s ease-in-out;
         position: fixed;
         left: 0;
         bottom: 0;
