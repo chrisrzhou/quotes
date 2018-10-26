@@ -287,6 +287,16 @@ test('filter by all combinations', () => {
       content: 'a',
       tags: ['tag1', 'tag2'],
     },
+    {
+      author: 'x',
+      content: 'baa',
+      tags: [],
+    },
+    {
+      author: 'y',
+      content: 'cAd',
+      tags: ['tag3', 'tag1'],
+    },
   ]);
   expect(
     getFilteredQuotes({
@@ -317,6 +327,11 @@ test('filter by all combinations', () => {
   ).toEqual([
     {
       author: 'y',
+      content: 'c',
+      tags: ['tag3'],
+    },
+    {
+      author: 'y',
       content: 'cAd',
       tags: ['tag3', 'tag1'],
     },
@@ -328,7 +343,18 @@ test('filter by all combinations', () => {
       selectedTags: ['badtag'],
       searchString: 'c',
     }),
-  ).toEqual([]);
+  ).toEqual([
+    {
+      author: 'y',
+      content: 'c',
+      tags: ['tag3'],
+    },
+    {
+      author: 'y',
+      content: 'cAd',
+      tags: ['tag3', 'tag1'],
+    },
+  ]);
   expect(
     getFilteredQuotes({
       quotes,

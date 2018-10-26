@@ -124,7 +124,7 @@ const Menu = ({
     <Flex
       bg={colors.white}
       css={`
-        animation: menuslide 1.5s ease-in-out;
+        animation: menuslide 1s ease-in-out;
         position: fixed;
         left: 0;
         bottom: 0;

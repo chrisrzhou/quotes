@@ -13,6 +13,10 @@ const createReducer = (initialState, handlers) => {
   };
 };
 
+const getRandomQuoteId = quotes => {
+  return quotes[Math.floor(Math.random() * quotes.length)].id;
+};
+
 const quotes = {};
 quotesData.map(quote => {
   const id = shortid();
@@ -27,7 +31,7 @@ const getInitialState = () => ({
   paused: false,
   searchString: '',
   selectedAuthors: [],
-  quoteId: Object.keys(quotes)[0],
+  quoteId: getRandomQuoteId(Object.values(quotes)),
   selectedTags: [],
   menuMode: null,
 });
@@ -48,7 +52,7 @@ export default createReducer(getInitialState(), {
     }
     return {
       ...state,
-      quoteId: quotes[Math.floor(Math.random() * quotes.length)].id,
+      quoteId: getRandomQuoteId(quotes),
     };
   },
   [actionTypes.RESET]: (state, _action) => ({

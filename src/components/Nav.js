@@ -84,17 +84,17 @@ class Nav extends React.PureComponent {
   }
 
   _handleHotKey = e => {
-    const {onTogglePause, onSetMenuMode} = this.props;
+    const {onTogglePause, onRandomQuote, onReset, onSetMenuMode} = this.props;
     if (e.key.toLowerCase() !== 'escape' && e.target.localName === 'input') {
       return;
     }
     switch (e.key.toLowerCase()) {
       case 'r':
-        this.props.onReset();
+        onReset();
         break;
       case 'arrowleft':
       case 'arrowright':
-        this.props.onRandomQuote();
+        onRandomQuote();
         break;
       case 'a':
         onSetMenuMode('author');
@@ -121,12 +121,13 @@ class Nav extends React.PureComponent {
   };
 
   _handlePause = () => {
-    if (this.props.paused) {
+    const {onRandomQuote, paused} = this.props;
+    if (paused) {
       clearInterval(this._interval);
       this._interval = undefined;
     } else {
       if (!this._interval) {
-        this._interval = setInterval(this._randomQuote, 15000);
+        this._interval = setInterval(onRandomQuote, 15000);
       }
     }
   };
