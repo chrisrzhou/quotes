@@ -6,16 +6,16 @@ https://quotes.chrisrzhou.io
 
 [license-badge]: https://flat.badgen.net/badge/license/MIT/blue
 
-View and search for [quotes](./src/quotes.md) written in markdown.
+Write your favorite quotes in markdown. Visualize and manage them in a simple and nice UI!
+
+Deploy an instance of this project by clicking the deploy button below. Add and manage your own quotes by editing the [./src/quotes.md](./src/quotes.md) markdown file.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chrisrzhou/quotes)
 
 ## TODO
 
-- [x] Build SearchResults component
-- [ ] Handle parser for edge cases (allow up to one newline for new blockquotes)
-- [ ] Allow autoplaying for filtered quotes (show currentQuoteNumber / filteredQuotesCount)
 - [ ] Share quotes on twitter/fb (social buttons)
 - [ ] screensaver support (Mac/PC/Linux)
-- [ ] Browser history
 - [ ] swipe support
 
 ## About
@@ -26,7 +26,7 @@ This project focuses on the simplicity of writing quotes in markdown, and provid
 
 ## Writing quotes
 
-Write your quotes in simple markdown in the [quotes.md](./src/quotes.md) file, using the standardized markdown blockquote notation, and intuitive notations for mentioning authors and adding hashtags:
+Write your quotes in simple markdown in the [quotes.md](./src/quotes.md) file, using the standardized markdown blockquote notation, and intuitive notations for authors and hashtags:
 
 ```
 > Not everything that can be counted counts, and not everything that counts can be counted. @Einstein #physics #universe
@@ -50,10 +50,6 @@ yarn
 yarn build
 # serve build folder
 ```
-
-Or, you can deploy to Netlify by hitting the button below:
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chrisrzhou/quotes)
 
 ## Personal Motivation
 

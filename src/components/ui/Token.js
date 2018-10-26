@@ -6,9 +6,11 @@ import {colors} from 'styles';
 export default ({active, label, onClick, width, ...otherProps}) => (
   <Flex
     alignItems="center"
-    bg={active ? colors.secondary : colors.wash}
+    bg={active ? colors.white : colors.wash}
     css={`
-      color: ${active ? colors.white : colors.primary};
+      border: 1px solid ${active ? colors.hover : colors.wash};
+      border-radius: 4px;
+      color: ${active ? colors.hover : colors.primary};
       cursor: pointer;
       font-size: 14px;
       text-align: center;
@@ -19,7 +21,7 @@ export default ({active, label, onClick, width, ...otherProps}) => (
     width={width || 'fit-content'}
     onClick={onClick}
     {...otherProps}>
-    <Text fontSize={[12, 16]}>{label}</Text>
+    <Text>{label}</Text>
     {active && <Text ml={2}>×</Text>}
   </Flex>
 );

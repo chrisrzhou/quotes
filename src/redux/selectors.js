@@ -5,13 +5,13 @@ const sortBySelectedAndCount = countMap => {
 };
 
 export const getQuote = state => {
-  return state.quotes[state.selectedQuoteIndex];
+  return state.quotes[state.quoteId];
 };
 
 export const getFilteredQuotes = state => {
   const {quotes, selectedAuthors, selectedTags, searchString} = state;
   const RE_SEARCH_STRING = new RegExp(searchString, 'i');
-  return quotes.filter(quote => {
+  return Object.values(quotes).filter(quote => {
     if (
       (selectedAuthors.length > 0 && !selectedAuthors.includes(quote.author)) ||
       (selectedTags.length > 0 &&
@@ -27,7 +27,7 @@ export const getFilteredQuotes = state => {
 export const getAuthors = state => {
   const countMap = {};
   const selectedAuthorsSet = new Set(state.selectedAuthors);
-  state.quotes.forEach(({author}) => {
+  Object.values(state.quotes).forEach(({author}) => {
     if (author != null) {
       if (!countMap[author]) {
         countMap[author] = {
@@ -45,7 +45,7 @@ export const getAuthors = state => {
 export const getTags = state => {
   const countMap = {};
   const selectedTagsSet = new Set(state.selectedTags);
-  state.quotes.forEach(quote => {
+  Object.values(state.quotes).forEach(quote => {
     quote.tags.forEach(tag => {
       if (tag != null) {
         if (!countMap[tag]) {

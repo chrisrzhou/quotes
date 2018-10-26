@@ -7,13 +7,12 @@ export default () => (
     items={[
       <Hotkey description="hotkey help" hotkey="?" />,
       <Hotkey description="search quotes" hotkey="Q / S" />,
+      <Hotkey description="random quote" hotkey="⇦ / ⇨" />,
+      <Hotkey description="autoplay (on/off)" hotkey="SPACE" />,
       <Hotkey description="search authors" hotkey="A" />,
       <Hotkey description="search tags" hotkey="T" />,
-      <Hotkey description="previous quote" hotkey="⇦" />,
-      <Hotkey description="next quote" hotkey="⇨" />,
       <Hotkey description="hide menu" hotkey="ESC" />,
       <Hotkey description="reset" hotkey="R" />,
-      <Hotkey description="autoplay (on/off)" hotkey="SPACE" />,
     ]}
   />
 );

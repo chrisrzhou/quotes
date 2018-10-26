@@ -12,14 +12,20 @@ const createAction = type => payload => ({
 });
 
 export const actionTypes = createActionTypes('quotes', [
-  'TOGGLE_PAUSE',
+  'CLEAR_ALL_AUTHORS',
+  'CLEAR_ALL_TAGS',
   'RESET',
   'SEARCH',
   'SELECT_AUTHOR',
   'SELECT_QUOTE',
   'SELECT_TAG',
   'SET_MENU_MODE',
+  'TOGGLE_PAUSE',
 ]);
+
+export const clearAllAuthors = createAction(actionTypes.CLEAR_ALL_AUTHORS);
+
+export const clearAllTags = createAction(actionTypes.CLEAR_ALL_TAGS);
 
 export const togglePause = createAction(actionTypes.TOGGLE_PAUSE);
 

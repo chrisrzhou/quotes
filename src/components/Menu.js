@@ -1,7 +1,15 @@
-import {Flex, Text} from 'rebass';
+import {Box, Flex, Text} from 'rebass';
+import {
+  clearAllAuthors,
+  clearAllTags,
+  search,
+  selectAuthor,
+  selectTag,
+  setMenuMode,
+} from 'redux/actions';
 import {getAuthors, getTags} from 'redux/selectors';
-import {search, selectAuthor, selectTag, setMenuMode} from 'redux/actions';
 
+import ClickableText from './ui/ClickableText';
 import Hotkeys from './Hotkeys';
 import NavItem from './ui/NavItem';
 import React from 'react';
@@ -10,9 +18,13 @@ import TokenList from './ui/TokenList';
 import {colors} from 'styles';
 import {connect} from 'react-redux';
 
+const MENU_FONT_SIZE = 20;
+
 const Menu = ({
   authors,
   menuMode,
+  onClearAllAuthors,
+  onClearAllTags,
   onSearch,
   onSelectAuthor,
   onSelectTag,
@@ -31,12 +43,29 @@ const Menu = ({
     case 'quote':
       content = <SearchResults />;
       title = (
-        <input
-          onChange={e => {
-            onSearch(e.target.value);
-          }}
-          value={searchString}
-        />
+        <Box
+          css={`
+            width: 100%;
+            input {
+              border: 2px solid ${colors.wash};
+              font-size: ${MENU_FONT_SIZE}px;
+              line-height: 1.6;
+              width: 100%;
+
+              :focus {
+                outline: none;
+              }
+            }
+          `}
+          pr={2}>
+          <input
+            onChange={e => {
+              onSearch(e.target.value);
+            }}
+            placeholder="Search quotes"
+            value={searchString}
+          />
+        </Box>
       );
 
       break;
@@ -48,7 +77,16 @@ const Menu = ({
           onSelectItem={onSelectAuthor}
         />
       );
-      title = 'Filter authors';
+      title = (
+        <Flex alignItems="center">
+          Filter authors
+          {selectedAuthors.length > 0 && (
+            <ClickableText ml={2} onClick={onClearAllAuthors}>
+              (clear)
+            </ClickableText>
+          )}
+        </Flex>
+      );
       break;
     case 'tag':
       content = (
@@ -58,7 +96,16 @@ const Menu = ({
           onSelectItem={onSelectTag}
         />
       );
-      title = 'Filter tags';
+      title = (
+        <Flex alignItems="center">
+          Filter tags
+          {selectedTags.length > 0 && (
+            <ClickableText ml={2} onClick={onClearAllTags}>
+              (clear)
+            </ClickableText>
+          )}
+        </Flex>
+      );
       break;
     case 'help':
       content = <Hotkeys />;
@@ -71,12 +118,12 @@ const Menu = ({
     <Flex
       bg={colors.white}
       css={`
-        animation: menuslide 1s ease;
+        animation: menuslide 1s ease-in-out;
         position: fixed;
         left: 0;
         bottom: 0;
         right: 0;
-        top: 0;
+        top: 50px;
         z-index: 1;
 
         @keyframes menuslide {
@@ -101,7 +148,14 @@ const Menu = ({
         `}
         justifyContent="space-between"
         mb="2">
-        <Text fontSize={24} fontWeight="bold">
+        <Text
+          css={`
+            box-sizing: border-box;
+            flex-grow: 1;
+          `}
+          fontSize={MENU_FONT_SIZE}
+          fontWeight="bold"
+          pr={3}>
           {title}
         </Text>
         <NavItem label="✕" onClick={() => onSetMenuMode()} />
@@ -113,11 +167,8 @@ const Menu = ({
           ::-webkit-scrollbar {
             width: 8px;
           }
-          ::-webkit-scrollbar-track {
-            background-color: ${colors.wash};
-          }
           ::-webkit-scrollbar-thumb {
-            background-color: ${colors.secondary};
+            background-color: ${colors.wash};
           }
         `}
         flexDirection="column"
@@ -138,6 +189,8 @@ export default connect(
     tags: getTags(state),
   }),
   {
+    onClearAllAuthors: clearAllAuthors,
+    onClearAllTags: clearAllTags,
     onSearch: search,
     onSelectAuthor: selectAuthor,
     onSelectTag: selectTag,

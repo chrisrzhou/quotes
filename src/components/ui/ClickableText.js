@@ -2,7 +2,7 @@ import React from 'react';
 import {Text} from 'rebass';
 import {colors} from 'styles';
 
-export default ({active, children, onClick, ...otherProps}) => (
+export default ({active, children, fontSize, onClick, ...otherProps}) => (
   <Text
     css={`
       color: ${active ? colors.hover : colors.secondary};
@@ -12,7 +12,7 @@ export default ({active, children, onClick, ...otherProps}) => (
         color: ${colors.hover};
       }
     `}
-    fontSize={[12, 24]}
+    fontSize={fontSize}
     fontWeight={active ? 'bold' : undefined}
     onClick={onClick}
     {...otherProps}>

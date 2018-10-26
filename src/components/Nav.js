@@ -6,6 +6,7 @@ import NavItem from './ui/NavItem';
 import React from 'react';
 import Row from './ui/Row';
 import {connect} from 'react-redux';
+import {getFilteredQuotes} from 'redux/selectors';
 
 class Nav extends React.PureComponent {
   componentDidMount() {
@@ -33,6 +34,8 @@ class Nav extends React.PureComponent {
     return (
       <Flex
         css={`
+          box-sizing: border-box;
+          height: 50px;
           left: 0;
           position: fixed;
           right: 0;
@@ -53,15 +56,15 @@ class Nav extends React.PureComponent {
             label="#"
             onClick={() => onSetMenuMode('tag')}
           />
-          <NavItem label="?" onClick={() => onSetMenuMode('help')} />
-        </Row>
-        <Row align="right">
           <NavItem
             label={
               paused ? <span>&#9658;</span> : <span>&#10073;&#10073;</span>
             }
             onClick={() => onTogglePause()}
           />
+        </Row>
+        <Row align="right">
+          <NavItem label="?" onClick={() => onSetMenuMode('help')} />
           <Link
             external
             href="https://github.com/chrisrzhou/quotes/blob/master/src/quotes.md">
@@ -82,10 +85,8 @@ class Nav extends React.PureComponent {
         this.props.onReset();
         break;
       case 'arrowleft':
-        this._previousQuote();
-        break;
       case 'arrowright':
-        this._nextQuote();
+        this._randomQuote();
         break;
       case 'a':
         onSetMenuMode('author');
@@ -117,22 +118,16 @@ class Nav extends React.PureComponent {
       this._interval = undefined;
     } else {
       if (!this._interval) {
-        this._interval = setInterval(this._nextQuote, 10000);
+        this._interval = setInterval(this._randomQuote, 15000);
       }
     }
   };
 
-  _nextQuote = () => {
-    const {quotes, onSelectQuote, selectedQuoteIndex} = this.props;
-    onSelectQuote((selectedQuoteIndex + 1) % quotes.length);
-  };
-
-  _previousQuote = () => {
-    const {quotes, onSelectQuote, selectedQuoteIndex} = this.props;
-    onSelectQuote(
-      (selectedQuoteIndex === 0 ? quotes.length - 1 : selectedQuoteIndex - 1) %
-        quotes.length,
-    );
+  _randomQuote = () => {
+    const {quotes, onSelectQuote} = this.props;
+    if (quotes.length > 0) {
+      onSelectQuote(quotes[Math.floor(Math.random() * quotes.length)].id);
+    }
   };
 }
 
@@ -140,8 +135,7 @@ export default connect(
   state => ({
     activeAuthors: state.selectedAuthors.length > 0,
     activeTags: state.selectedTags.length > 0,
-    selectedQuoteIndex: state.selectedQuoteIndex,
-    quotes: state.quotes,
+    quotes: getFilteredQuotes(state),
     paused: state.paused,
   }),
   {

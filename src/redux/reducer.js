@@ -1,5 +1,5 @@
 import {actionTypes} from './actions';
-import quotes from 'quotes.md';
+import quotesData from 'quotes.md';
 import shortid from 'shortid';
 
 const createReducer = (initialState, handlers) => {
@@ -12,38 +12,56 @@ const createReducer = (initialState, handlers) => {
   };
 };
 
+const quotes = {};
+quotesData.map(quote => {
+  const id = shortid();
+  quotes[id] = {
+    ...quote,
+    id,
+  };
+});
+
 const getInitialState = () => ({
-  quotes: quotes.map(quote => ({...quote, id: shortid()})),
+  quotes,
   paused: false,
   searchString: '',
   selectedAuthors: [],
-  selectedQuoteIndex: 0,
+  quoteId: Object.keys(quotes)[0],
   selectedTags: [],
   menuMode: null,
 });
 
 export default createReducer(getInitialState(), {
+  [actionTypes.CLEAR_ALL_AUTHORS]: (state, _action) => ({
+    ...state,
+    selectedAuthors: [],
+  }),
+  [actionTypes.CLEAR_ALL_TAGS]: (state, _action) => ({
+    ...state,
+    selectedTags: [],
+  }),
   [actionTypes.TOGGLE_PAUSE]: (state, {payload}) => ({
     ...state,
     paused: payload === undefined ? !state.paused : payload,
   }),
   [actionTypes.RESET]: (state, _action) => ({
     ...getInitialState(),
-    selectedQuoteIndex: state.selectedQuoteIndex,
+    quoteId: state.quoteId,
   }),
   [actionTypes.SEARCH]: (state, {payload}) => ({
     ...state,
-    searchString: payload,
     menuMode: 'quote',
+    searchString: payload,
   }),
   [actionTypes.SELECT_QUOTE]: (state, {payload}) => ({
     ...state,
-    selectedQuoteIndex: payload,
+    quoteId: payload,
   }),
   [actionTypes.SELECT_AUTHOR]: (state, {payload}) => {
     const {selectedAuthors} = state;
     return {
       ...state,
+      menuMode: 'author',
       selectedAuthors: selectedAuthors.includes(payload)
         ? selectedAuthors.filter(author => author !== payload)
         : [...selectedAuthors, payload],
@@ -53,6 +71,7 @@ export default createReducer(getInitialState(), {
     const {selectedTags} = state;
     return {
       ...state,
+      menuMode: 'tag',
       selectedTags: selectedTags.includes(payload)
         ? selectedTags.filter(tag => tag !== payload)
         : [...selectedTags, payload],
@@ -61,5 +80,6 @@ export default createReducer(getInitialState(), {
   [actionTypes.SET_MENU_MODE]: (state, {payload}) => ({
     ...state,
     menuMode: payload === state.menuMode ? null : payload,
+    searchString: '',
   }),
 });

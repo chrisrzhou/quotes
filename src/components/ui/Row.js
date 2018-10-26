@@ -13,7 +13,8 @@ export default ({children, align}) => (
           margin-left: ${align === 'right' ? '24px' : undefined};
         }
       }
-    `}>
+    `}
+    flexWrap="wrap">
     {children}
   </Flex>
 );
