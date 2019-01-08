@@ -85,3 +85,19 @@
 > Everything will be okay in the end. If it's not okay, then it's not the end.
 
 @John Lennon #optimism
+
+> Even though what you did was wrong, you're still a good kid, and that guy was a prick.  Sometimes that matters more.
+
+@Mr. Robot #mrrobot #principles
+
+> That's who you are. That's what you are.  You're nothing to anyone. To everyone.
+
+@Eliot Alderson #mrrobot #life
+
+> Give a man a gun, he'll rob a bank.  Give a man a bank, he'll rob the world.
+
+@Tyrell Wellick #mrrobot #greed
+
+> Power belongs to the people that take it.  Nothing to do with their hard work, strong ambitions, or rightful qualifications, no.  The actual will to take is often the only thing that's necessary.
+
+@Tyrell Wellick #mrrobot #power
