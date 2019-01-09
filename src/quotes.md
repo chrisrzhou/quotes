@@ -92,7 +92,7 @@
 
 > That's who you are. That's what you are.  You're nothing to anyone. To everyone.
 
-@Eliot Alderson #mrrobot #life
+@Elliot Alderson #mrrobot #life
 
 > Give a man a gun, he'll rob a bank.  Give a man a bank, he'll rob the world.
 
@@ -105,3 +105,16 @@
 > Is any of it real? I mean, look at this. Look at it! A world built on fantasy! Synthetic emotions in the form of pills, psychological warfare in the form of advertising, mind-altering chemicals in the form of food, brainwashing seminars in the form of media, controlled isolated bubbles in the form of social networks. Real? You want to talk about reality? We haven't lived in anything remotely close to it since the turn of the century. We turned it off, took out the batteries, snacked on a bag of GMOs while we tossed the remnants in the ever-expanding dumpster of the human condition. We live in branded houses trademarked by corporations built on bipolar numbers jumping up and down on digital displays, hypnotizing us into the biggest slumber mankind has ever seen. You have to dig pretty deep, kiddo, before you can find anything real. We live in a kingdom of bullshit, a kingdom you've lived in for far too long. So don't tell me about not being real. I'm no less real than the fucking beef patty in your Big Mac.
 
 @Mr. Robot #mrrobot #reality
+
+> Why do they fight so desperately to mask what they are?  Or is it that they become who they are when they put on the mask?
+
+@Elliot Anderson #mrrobot #mask
+
+> Maybe truth doesn't even exist , maybe what we think is all we have.
+
+@Ray #mrrobot
+
+> How long are you going to keep us in this analog nightmare?
+
+@Mr. Robot #mrrobot #digital
+
