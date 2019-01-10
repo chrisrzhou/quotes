@@ -110,7 +110,7 @@
 
 @Elliot Anderson #mrrobot #mask
 
-> Maybe truth doesn't even exist , maybe what we think is all we have.
+> Maybe truth doesn't even exist, maybe what we think is all we have.
 
 @Ray #mrrobot
 
@@ -121,3 +121,8 @@
 > Existence could be beautiful or it could be ugly. But that's on you.
 
 @Leon #mrrobot #existence #choice
+
+> I’ll tell you, the human condition is a straight-up tragedy, cuz. Word.
+
+@Leon #mrrobot #human
+
