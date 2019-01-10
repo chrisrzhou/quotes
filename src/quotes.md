@@ -118,3 +118,6 @@
 
 @Mr. Robot #mrrobot #digital
 
+> Existence could be beautiful or it could be ugly. But that's on you.
+
+@Leon #mrrobot #existence #choice
