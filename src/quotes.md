@@ -126,3 +126,6 @@
 
 @Leon #mrrobot #human
 
+> I feel like there are enough people in the world who would love to watch you fail, that if you make yourself your own worst enemy then you can't get very far.
+
+@wife #failure
