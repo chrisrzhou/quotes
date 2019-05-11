@@ -140,4 +140,10 @@
 
 > I believe in survival. In the destiny of the Nordic race. I believe in facism. Oh yes, I am a facist. What of it? Facism... A word, a word whose meaning has been lost in the bleatings of the weak and the treacherous. The Romans invented facism. A bundle of bound twigs was its symbol. One twig could be broken. A bundle would prevail. Facism... Strength in unity. I believe in strength. I believe in unity. And if that strength, that unity of purpose demands a uniformity of thought, word and deed then so be it. I will not hear talk of freedom. I will not hear talk of individual liberty. They are luxuries. I do not believe in luxuries. Do I reserve for myself the freedom to I deny to others? I do not. I sit here within my cage and I am but a servant, who am master of all that I see. I see desolation. I see ashes. I have so very much. I have so very little. I am not loved. I know that. Not in soul or body. I have never known the soft whisper of endearment. Never known the peace that lies between the things of woman. But I am respected. I am feared. And that will suffice.
 
-@Afam Susan #facisn
+@Afam Susan #facism
+
+> Justice is meaningless without freedom.
+@V #anarchy #justice #freedom
+
+> Vi veri veniversum vivus vici (By the power of truth, I while living, have conquered the universe)
+@V #truth
