@@ -129,3 +129,15 @@
 > I feel like there are enough people in the world who would love to watch you fail, that if you make yourself your own worst enemy then you can't get very far.
 
 @wife #failure
+
+> They made you into a statistic. But that's not the real you. That's not who you are inside.
+
+@V #identity
+
+> How you can show so much concern for porcelain and plastic and show so little for flesh and blood
+
+@V #materialism
+
+> I believe in survival. In the destiny of the Nordic race. I believe in facism. Oh yes, I am a facist. What of it? Facism... A word, a word whose meaning has been lost in the bleatings of the weak and the treacherous. The Romans invented facism. A bundle of bound twigs was its symbol. One twig could be broken. A bundle would prevail. Facism... Strength in unity. I believe in strength. I believe in unity. And if that strength, that unity of purpose demands a uniformity of thought, word and deed then so be it. I will not hear talk of freedom. I will not hear talk of individual liberty. They are luxuries. I do not believe in luxuries. Do I reserve for myself the freedom to I deny to others? I do not. I sit here within my cage and I am but a servant, who am master of all that I see. I see desolation. I see ashes. I have so very much. I have so very little. I am not loved. I know that. Not in soul or body. I have never known the soft whisper of endearment. Never known the peace that lies between the things of woman. But I am respected. I am feared. And that will suffice.
+
+@Afam Susan #facisn
