@@ -147,3 +147,39 @@
 
 > Vi veri veniversum vivus vici (By the power of truth, I while living, have conquered the universe)
 @V #truth
+
+> But it was my integrity that was important. Is that so selfish? It sells for so little, but it's all we have left in this place. It is the very last inch of us. But within that inch we are free
+
+@Valerie #integrity #free
+
+> An inch. It's small and it's fragile and it's the only thing in the world that's worth having. We must never lose it, or sell it, or give it away.  We must never let them take it from us.  I don't know who you are, or whether you're a man or woman. I may never see you. I will never hug you or cry with you or get drunk with you.  But I love you.
+
+@Valerie #love #freedom
+
+> With anarchy comes an age of ordnung, of true order, which is to say voluntary order
+
+@V #anarchy
+
+> There. You see them? Standing with their numbers on their blank, indifferent faces, numremberg in miniature, the ranks of painted wooden men. Poor dominoes. Your pretty empire took so long to build, now, with a snap of history's fingers. Down it goes.
+
+@V #anarchy
+
+> Who imprisoned me here? Who keeps me here? Who can release me? Who's controlling and constraining my life, except me?
+
+@V #freedom
+
+> With science, ideas can germinate within a bed of theory, form, and practice that assists their growth. But we, as gardeners, must beware, for some seeds are the seeds of ruin. And the most iridescent blooms are often the most dangerous.
+
+@V #science #doom
+
+> Did you think to kill me? There's no flesh or blood within this cloak to kill. There's only an idea. Ideas are bulletproof.
+
+@V #ideas
+
+> Anarchy wears two faces, both Creator and destroyer. Thus destroyers topple empires, make a canvas of clean rubble where creators then can build a better world. Rubble, once achieved, makes further ruon's means irrelevant.
+
+@V #anarchy
+
+> Since mankind's Dawn, a handful of oppressors have accepted the responsibility over lives that we should have accepted for ourselves.  By doing so, they took our power. By doing nothing, we gave it away.
+
+@V #anarchy #power
