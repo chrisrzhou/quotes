@@ -2,9 +2,9 @@
 
 @Serenity Prayer #bible #serenity #wisdom
 
-> They claim their labours are to build a heaven, yet their heaven is populated with horrors. Perhaps the world is not made. Perhaps nothing is made. A clock without a craftsman.
+> Perhaps the world is not made.  Perhaps nothing is made.  Perhaps it simply is, has been, will always be there.  A clock without a craftsman.
 
-@Dr. Manhattan #watchmen #truth
+@Dr. Manhattan #creation #fate
 
 > Nothing is true, everything is permitted.
 
@@ -183,3 +183,35 @@
 > Since mankind's Dawn, a handful of oppressors have accepted the responsibility over lives that we should have accepted for ourselves.  By doing so, they took our power. By doing nothing, we gave it away.
 
 @V #anarchy #power
+
+> Yes, we were crazy, we were kinky, we were Nazis, all those things that people say. We were also doing something because we believed in it. We were attempting, through our personal efforts, to make our country a safer and better place to live in. Individually, working on our separate patches of turf, we did too much good in our respective communities to be written off as mere aberration, whether social, or sexual or psychological.
+
+@Watchman #individualism
+
+> In twelve seconds time, I drop the photograph to the sand at my feet, walking away. It's already lying there, twelve seconds into the future.
+
+@Dr. Manhattan #fate #choice
+
+> As I come to understand Vietnam and what it implies about the human condition, I also realize that few humans will permit themselves such an understanding.  Blake's different. He understands perfectly, and he doesn't care.
+
+@Dr. Manhattan #absurdism
+
+> Things have their shape in time, not space alone.  Some marble blocks have statues within them, embedded in their future.
+
+@Dr. Manhattan #fate
+
+> This rudderless world is not shaped by vague metaphysical forces. It is not God who kills the children. Not fate that butchers them or destiny that feeds them to the dogs. It’s us. Only us.
+
+@Rorsharch #fate #actions
+
+Once upon a time, in some out of the way corner of that universe which is dispersed into numberless twinkling solar systems, there was a star upon which clever beasts invented knowing. That was the most arrogant and mendacious minute of “world history,” but nevertheless, it was only a minute. After nature had drawn a few breaths, the star cooled and congealed, afnd the clever beasts had to die. 
+
+@Friedrich Nietzsche #nihilism
+
+We have labored long to build a heaven, only to find it populated with horrors.
+
+@Watchmen #suffering
+
+It is the oldest ironies that are still the most satisfying: man, when preparing for bloody war, will orate loudly and most eloquently in the name of peace.  Never before has man pursued global harmony more vocally while amassing stockpiles of weapons so devstating in their effect.  The second world war - we were told - was the War to End Wars.  The development of the atomic bomb is the Weapon to End Wars.  And yet wars continue.
+
+@Dr Manhattan #wars #irony
