@@ -138,7 +138,10 @@
 
 @V #materialism
 
-> I believe in survival. In the destiny of the Nordic race. I believe in facism. Oh yes, I am a facist. What of it? Facism... A word, a word whose meaning has been lost in the bleatings of the weak and the treacherous. The Romans invented facism. A bundle of bound twigs was its symbol. One twig could be broken. A bundle would prevail. Facism... Strength in unity. I believe in strength. I believe in unity. And if that strength, that unity of purpose demands a uniformity of thought, word and deed then so be it. I will not hear talk of freedom. I will not hear talk of individual liberty. They are luxuries. I do not believe in luxuries. Do I reserve for myself the freedom to I deny to others? I do not. I sit here within my cage and I am but a servant, who am master of all that I see. I see desolation. I see ashes. I have so very much. I have so very little. I am not loved. I know that. Not in soul or body. I have never known the soft whisper of endearment. Never known the peace that lies between the things of woman. But I am respected. I am feared. And that will suffice.
+> I believe in survival. In the destiny of the Nordic race. I believe in facism. Oh yes, I am a facist. What of it? Facism... A word, a word whose meaning has been lost in the bleatings of the weak and the treacherous. The Romans invented facism. A bundle of bound twigs was its symbol. One twig could be broken. A bundle would prevail. Facism... Strength in unity. I believe in strength. I believe in unity. And if that strength, that unity of purpose demands a uniformity of thought, word and deed then so be it. I will not hear talk of freedom. I will not hear talk of individual liberty. They are luxuries. I do not believe in luxuries. Do I reserve for myself the freedom to I deny to others? I do not. I sit here within my cage and I am but a servant, who am master of all that I see. I see desolation. I see ashes. I have so very much. I have so very little. I am not loved. I know that. Not in soul or body. I have never known the soft whisper of endearment. Never known the peace that lies between the things of 
+
+
+an. But I am respected. I am feared. And that will suffice.
 
 @Afam Susan #facism
 
@@ -204,14 +207,52 @@
 
 @Rorsharch #fate #actions
 
-Once upon a time, in some out of the way corner of that universe which is dispersed into numberless twinkling solar systems, there was a star upon which clever beasts invented knowing. That was the most arrogant and mendacious minute of “world history,” but nevertheless, it was only a minute. After nature had drawn a few breaths, the star cooled and congealed, afnd the clever beasts had to die. 
+> Once upon a time, in some out of the way corner of that universe which is dispersed into numberless twinkling solar systems, there was a star upon which clever beasts invented knowing. That was the most arrogant and mendacious minute of “world history,” but nevertheless, it was only a minute. After nature had drawn a few breaths, the star cooled and congealed, afnd the clever beasts had to die. 
 
 @Friedrich Nietzsche #nihilism
 
-We have labored long to build a heaven, only to find it populated with horrors.
+> We have labored long to build a heaven, only to find it populated with horrors.
 
 @Watchmen #suffering
 
-It is the oldest ironies that are still the most satisfying: man, when preparing for bloody war, will orate loudly and most eloquently in the name of peace.  Never before has man pursued global harmony more vocally while amassing stockpiles of weapons so devstating in their effect.  The second world war - we were told - was the War to End Wars.  The development of the atomic bomb is the Weapon to End Wars.  And yet wars continue.
+> It is the oldest ironies that are still the most satisfying: man, when preparing for bloody war, will orate loudly and most eloquently in the name of peace.  Never before has man pursued global harmony more vocally while amassing stockpiles of weapons so devstating in their effect.  The second world war - we were told - was the War to End Wars.  The development of the atomic bomb is the Weapon to End Wars.  And yet wars continue.
 
 @Dr Manhattan #wars #irony
+
+> Is that what happens to us? A life of conflict with no time for friends, so that when it's done only our enemies leave roses.
+
+@Rorschach #life #regret
+
+> He who fights with monsters should be careful lest he thereby become a monster. And if thou gaze long into an abyss, the abyss will also gaze into thee.
+
+@Nietzsche #nihilism
+
+> In this state one enriches everything out of one's own fullness: whatever one sees, whatever wills is seen swelled, taut, strong, overloaded with strength. A man in this state transforms things until they mirror his power — until they are reflections of his perfection. This having to transform into perfection is — art.
+
+@Nietzsche #art #power #enlightenment
+
+> God is dead.
+
+@Nietzsche #nihilism
+
+> Memories are what our reason is based upon, if we can't face them, we deny reason itself! Although, why not? We aren't contractuaally tied down to rationality! There is no sanity clause! So when you find yourself locked onto an unpleasant train of thought, heading for the places in your past where the screaming is unbearable, remember there's always madness. Madness is the emergency exit. You can just step outside, and close the door on all those dreadful things that happened. You can lock them away... Forever.
+
+@Joker #madness #reason
+
+> Ladies and gentlemen! You've read about it in the newspapers! Now, shudder as you observe, before your very eyes, that most rare and tragic of nature's mistakes! I give you the average man! Physically unremarkable, it has instead a deformed set of values. Notice the hideously bloated sense of humanity's importance. The club-footed social conscience and the withered optimsm. Most repulsive of all, are its frail and useless notions of order and sanity. If too much weight is placed upon them... They snap.
+
+@Joker #madeness #sanity
+
+> All it takes is one bad day to reduce the sanest man alive to lunacy. That's how far the world is from where I am. Just one bad day
+
+@Joker #madness
+
+> Do you know how many times we've come close to World War Three over a flock of geese on a computer screen? Do you know what triggered the last World War? An argument over how many telegraph poles Germany owed its war debt creditors! Telegraph poles! Ha ha ha ha ha! It's all a joke! Everything anybody ever valued or struggled fro... It's all a monstrous, demented gag. So why can't you see the funny side?
+
+@Joker #absurdism
+
+> As far as we can discern, the sole purpose of human existence is to kindle a light of meaning in the darkness of mere being.
+
+@ Jung #existence #meaning
+
+
