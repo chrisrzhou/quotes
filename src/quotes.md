@@ -253,6 +253,8 @@ an. But I am respected. I am feared. And that will suffice.
 
 > As far as we can discern, the sole purpose of human existence is to kindle a light of meaning in the darkness of mere being.
 
-@ Jung #existence #meaning
+@Jung #existence #meaning
 
+> The mind is endless. You put me in a dark solitary cell, and to you that's the end, to me it's the beginning, it's the universe in there, there's a world in there, and I'm free.
 
+@Charles Manson #mind #freedom
