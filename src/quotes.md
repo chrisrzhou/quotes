@@ -258,3 +258,51 @@ an. But I am respected. I am feared. And that will suffice.
 > The mind is endless. You put me in a dark solitary cell, and to you that's the end, to me it's the beginning, it's the universe in there, there's a world in there, and I'm free.
 
 @Charles Manson #mind #freedom
+
+## Westworld
+
+> Winning doesn't mean anything unless someone else loses.  Which means you're here to be the loser.
+
+@ Man in Black #winning
+
+> They don't make anything like they used to.
+
+@Ford #craftsmanship
+
+> Evolution forged the entirety of sentient life on this planet using only one tool - the mistake.
+
+@Ford #evolution #imperfection
+
+> Everything in this world is magic, except to the magician.
+
+@Ford #knowledge
+
+## Ghost in the Shell
+
+> And in me, a giant network that includes me, is now connected to me.  We are a part of it, our collective totality.
+
+@The Puppeteer #network
+
+> The universe turns, and in accordance with the "time" at that moment, progresses, always seeking greater stability, and greater existence, it continues growing in complexity and diversity, and sometimes it abandons things.
+
+@The Puppeteer #evolution
+
+> This is the cosmic species - the seed, "a highly efficient package of information...", the greatness of life.
+
+@Major #information #life
+
+> The effect you have on others is the most valuable currency there is, because everything you gain in life will rot and fall apart, and all that will be left of you, is what was in your heart.
+
+@Jim Carrey #intention #heart
+
+> You can spend your whole life imagining ghosts, worrying about the pathway to the future, but all there will ever be - is what's happening here, and the decisions we make in this moment, which are in either love or fear.  So many of us choose our paths out of fear disguised as practicality.  What we really want seems impossibly out of reach and ridiculous to expect so we never dare to ask the universe for it.  Ask the universe for it, please.
+
+@Jim Carrey #fear #love #universe
+
+> My soul is not contained within the limits of my body, my body is contained within the limitlessness of my soul.
+
+@Jim Carrey #soul
+
+> It's just about letting the universe know what you want, and working toward it, and letting go on how it comes to pass.  No matter what you gain, ego will not let you rest.  It will tell you that you cannot stop until you left an indelible mark on the Earth, until you achieved immortality.  How tricky is this ego, that it will tempt us with the promise of sonmething we already possess? Relax, and dream up a good life.
+
+@Jim Carrey #universe #ego
