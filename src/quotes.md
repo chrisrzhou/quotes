@@ -277,6 +277,27 @@ an. But I am respected. I am feared. And that will suffice.
 
 @Ford #knowledge
 
+> Surviving is just another loop.  I'm getting out of here.
+
+@Maeve #escape #life
+
+> The human intellect is like peacock features, just an extravagant display intended to attract a mate. All of art, literature, a bit of Mozart, William Shakespeare, Michelangelo, and the Empire State Building, just an elaborate mating ritual.  Maybe it doesn't matter that we have accomplished so much for the basest of reasons. But, of course, the peacock can barely fly. It lives in the dirt, pecking insects out of the muck, consololing itself with its great beauty.
+
+@Ford #vanity #repetition #purpose
+
+> We live in loops as tight and as closed as the hosts do, seldom questioning our choices, content for the most part to be told what to do next.
+
+@Ford #choice #escape
+
+> Consciousness isn't a journey upwards, it is a journey inwards.
+
+@Arnold #consciousness #inner
+
+> Mozart, Beethoven, and Chopin never died.  They simply became music.
+
+@Ford #legacy
+
+
 ## Ghost in the Shell
 
 > And in me, a giant network that includes me, is now connected to me.  We are a part of it, our collective totality.
@@ -306,3 +327,16 @@ an. But I am respected. I am feared. And that will suffice.
 > It's just about letting the universe know what you want, and working toward it, and letting go on how it comes to pass.  No matter what you gain, ego will not let you rest.  It will tell you that you cannot stop until you left an indelible mark on the Earth, until you achieved immortality.  How tricky is this ego, that it will tempt us with the promise of sonmething we already possess? Relax, and dream up a good life.
 
 @Jim Carrey #universe #ego
+
+> I believe we are creators, and I believe we create with every thought, and every word, every moment is pregnant with the next moment of your life.
+
+@Jim Carrey #create #thought
+
+> For as far as I know, there is no proof whatever of the existence of an objective reality apart from our senses, and I do not see why we should accept the outside world as much solely by virtue of our senses.
+
+@Escher #reality #existence
+
+> We live in a beautiful and orderly world and not in a chaos without norms, as we sometimes seem to.
+
+@Escher #order #chaos
+
